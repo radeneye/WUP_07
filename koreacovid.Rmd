@@ -62,8 +62,12 @@ colPerc(table1)
 Out of the alive group, 12% more women than men survived. Out of the dead group, about 30% more men than women died. 98.7% of females lived, while 1.4% of them died. 97% of men lived, while 3% of the men died. Percentage wise, COVID killed about twice the amount of men than it did women.
 
 ## Inferential results 
-
-
+```{r}
+chisq.test(table1)
+chisqtestGC(table1)
+fisher.test(table1)
+```
+In our Chi-Square result, we received a p-value of 0.0012. Since this value is < 0.05 (our point of significance), we reject our null (that dying is not independent of sex). In our Fisher's test, we received a p-value of 0.0009 which is also < 0.05, we again will be rejecting the null hypothesis.
 
 
 ## Conclusions
